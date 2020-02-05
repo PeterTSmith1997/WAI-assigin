@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app='App'>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<title>AngularJS</title>
+<!-- Link to library to use in Application -->
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-resource.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<script src="js/app.js"></script>
+<script src="js/controllers.js"></script>
+<body>
+<section data-ng-controller="IndexController">
+    <!-- use double braces to refer to a property defined in IndexController -->
+    <h1>{{title}}</h1>
+
+    <div class="paperSearch">
+        <div data-ng-controller="PaperSearch" data-ng-include="'js/partials/search.html'"></div>
+    </div>
+</section>
+</body>
+</html>

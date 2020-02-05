@@ -1,0 +1,5 @@
+Search: <input data-ng-model="query">
+
+<section data-ng-repeat="p in papers |filter:query as filtered">
+{{p.title}}
+</section>
