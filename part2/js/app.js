@@ -17,9 +17,14 @@
             '$routeProvider',     // built in variable which injects functionality, passed as a string
             function($routeProvider) {
                 $routeProvider.when('/search',{
-                  templateUrl: "js/partials/search.html"
+                    templateUrl: "js/partials/search.html"
                 })
-                 .otherwise({
+                .when('schedule',{
+                    templateUrl: "js/partials/schedule.html"
+                    }
+
+                )
+                .otherwise({
 
                  })
 

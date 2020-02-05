@@ -36,5 +36,20 @@
 
             }
         ])
+        .controller('schedule',
+            [
+
+                '$scope',               // angular variable as a string
+                function ($scope) {
+                    $scope.schedule =[
+                        {
+                            day: "Monday",
+                            event: "garry"
+                        }
+                    ]
+
+                }
+            ])
+
 
 }());

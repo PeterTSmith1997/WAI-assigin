@@ -2,15 +2,15 @@
 <html lang="en" data-ng-app='App'>
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<title>AngularJS</title>
+
 <!-- Link to library to use in Application -->
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-resource.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
+    <title>{{title}}</title>
+</head>
 <script src="js/app.js"></script>
 <script src="js/controllers.js"></script>
 <body>
@@ -20,6 +20,9 @@
 
     <div class="paperSearch">
         <div data-ng-controller="PaperSearch" data-ng-include="'js/partials/search.html'"></div>
+    </div>
+    <div class="schedule">
+        <div data-ng-controller="schedule" data-ng-include="'js/partials/schedule.html'"></div>
     </div>
 </section>
 </body>

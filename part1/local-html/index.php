@@ -62,7 +62,10 @@ switch ($options['subject']){
     case 'api';
         header("Content-type: applicaton/json");
         switch ($options['param1']){
-            case 'schedue';
+            case 'schedule';
+                $response = new JSONRecordSet();
+                $sql = "";
+                 $response = $response->getJSONRecordSet($sql);
 
                 break;
         }
