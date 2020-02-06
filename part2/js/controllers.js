@@ -39,14 +39,24 @@
         .controller('schedule',
             [
 
-                '$scope',               // angular variable as a string
-                function ($scope) {
-                    $scope.schedule =[
-                        {
-                            day: "Monday",
-                            event: "garry"
+                '$scope', // angular variable as a string
+                '$dataService',function ($scope, dataService) {
+                var getCourses = function () {
+                    dataService.getSchedule().then(  // then() is called when the promise is resolve or rejected
+                        function(response){
+
+                            $scope.schedule = response.data;
+                        },
+                        function(err){
+                            $scope.status = 'Unable to load data ' + err;
+                        },
+                        function(notify){
+                            console.log(notify);
                         }
-                    ]
+                    ); // end of getCourses().then
+                };
+
+                getSchedule();  // call the method just defined
 
                 }
             ])

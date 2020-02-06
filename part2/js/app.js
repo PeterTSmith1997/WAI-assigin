@@ -19,8 +19,9 @@
                 $routeProvider.when('/search',{
                     templateUrl: "js/partials/search.html"
                 })
-                .when('schedule',{
-                    templateUrl: "js/partials/schedule.html"
+                .when('Schedule',{
+                    templateUrl: "js/partials/schedule.html",
+                    cotroller: "ScheduleController"
                     }
 
                 )

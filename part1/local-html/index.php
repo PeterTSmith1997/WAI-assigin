@@ -13,6 +13,7 @@ function autoloadClasses($className) {
 }
 
 spl_autoload_register("autoloadClasses");
+require_once ('./../config/setenv.php');
 /**$navItems = Array("home"=>"index.php","other page"=>"docs.php","more"=>"more.php");
 $page = new WebPageWithNav('Home','Welcome', $navItems, 'footer');
 echo $page->getPage();
@@ -21,7 +22,7 @@ echo $page->getPage();
 
 $navItems = Array("home"=>"/","documentation"=>"documentation", "about"=>"about");
 $path = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
-echo $path;
+//echo $path;
 $base = "/";
 if (strpos($path,$base)){
     $path = substr($path,strlen($base));
@@ -41,8 +42,6 @@ if (isset($path[0])) {
         }
     }
 }
-
-print_r($options);
 
 switch ($options['subject']){
     case '':
@@ -64,10 +63,23 @@ switch ($options['subject']){
         switch ($options['param1']){
             case 'schedule';
                 $response = new JSONRecordSet();
-                $sql = "";
-                 $response = $response->getJSONRecordSet($sql);
+                $sql = "SELECT sessions.id, title, slotsID FROM sessions";
+                $response = $response->getJSONRecordSet($sql);
+                echo $response;
 
                 break;
+            case 'presentations':
+                $response = new JSONRecordSet();
+                $sql = "Select from ";
+                $response = $response->getJSONRecordSet($sql);
+                echo $response;
+            break;
+            default:
+                //header("Content-type: applicaton/json", true, 404);
+                echo json_encode([
+                    "status"=> "error",
+                    "message"=> "endpoint not found"
+                ]);
         }
         break;
     default:
