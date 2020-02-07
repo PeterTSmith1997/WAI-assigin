@@ -23,26 +23,14 @@
             }
         ]
     ).
-    controller('PaperSearch',
-    [
-
-        '$scope',               // angular variable as a string
-            function ($scope) {
-                $scope.papers =[
-                    {
-                        title: "hello"
-                    }
-                ]
-
-            }
-        ])
-        .controller('schedule',
+    controller('Schedule',
             [
 
                 '$scope', // angular variable as a string
-                '$dataService',function ($scope, dataService) {
-                var getCourses = function () {
-                    dataService.getSchedule().then(  // then() is called when the promise is resolve or rejected
+                '$dataService',
+/*                function ($scope, dataService) {
+                var getSchedules = function () {
+                    dataService.getSchedules().then(  // then() is called when the promise is resolve or rejected
                         function(response){
 
                             $scope.schedule = response.data;
@@ -56,10 +44,26 @@
                     ); // end of getCourses().then
                 };
 
-                getSchedule();  // call the method just defined
+                getSchedules();  // call the method just defined
 
+                }*/
+                function ($scope, dataService) {
+                    $scope.test ="hi Garry"
                 }
-            ])
+            ]).
+    controller('PaperSearch',
+        [
+
+            '$scope',               // angular variable as a string
+            function ($scope) {
+                $scope.papers =[
+                    {
+                        title: "hello"
+                    }
+                ]
+
+            }
+        ])
 
 
 }());

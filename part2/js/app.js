@@ -21,7 +21,7 @@
                 })
                 .when('Schedule',{
                     templateUrl: "js/partials/schedule.html",
-                    cotroller: "ScheduleController"
+                    controller: "ScheduleController"
                     }
 
                 )
