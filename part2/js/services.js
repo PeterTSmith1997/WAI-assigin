@@ -34,7 +34,7 @@
                         .then(function (response) {
                                 console.log(response);
                                 defer.resolve({
-                                    data: response.data.data.Results         // create data property with value from response
+                                    data: response.data.data.results         // create data property with value from response
                                 });
                             },                                                 // another dot to chain to error()
                             function (err) {

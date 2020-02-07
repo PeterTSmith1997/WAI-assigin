@@ -32,8 +32,9 @@
                 var getSchedules = function () {
                     dataService.getSchedules().then(  // then() is called when the promise is resolve or rejected
                         function(response){
+                            console.log(response);
 
-                            $scope.schedule = response.data;
+                            $scope.schedules = response.data;
                         },
                         function(err){
                             $scope.status = 'Unable to load data ' + err;
