@@ -27,8 +27,8 @@
             [
 
                 '$scope', // angular variable as a string
-                '$dataService',
-/*                function ($scope, dataService) {
+                'dataService',
+               function ($scope, dataService) {
                 var getSchedules = function () {
                     dataService.getSchedules().then(  // then() is called when the promise is resolve or rejected
                         function(response){
@@ -46,9 +46,6 @@
 
                 getSchedules();  // call the method just defined
 
-                }*/
-                function ($scope, dataService) {
-                    $scope.test ="hi Garry"
                 }
             ]).
     controller('PaperSearch',

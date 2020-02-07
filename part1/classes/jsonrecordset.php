@@ -36,7 +36,7 @@ class JSONRecordSet extends RecordSet {
                     'message' => $message,
                     'data' => array(
                             "RowCount"=>$nRecords, 
-                            "Result"=>$result
+                            "Results"=>$result
                           )
                  ),
                  JSON_PRETTY_PRINT

@@ -51,7 +51,12 @@ switch ($options['subject']){
     case 'documentation':
         $page = new SectionedWebpage('page2', 'second page', $navItems, 'footer');
         $page->addToBody("This page shows a 2nd page");
-        $page->addApi('div test','words','wvwtjyw8yky8w 7krwe');
+        $page->addApi("http://localhost/api/", "Main api entry point", "This give details regarding the api" );
+        $page->addApi("http://localhost/api/schedule", "Schedule information", "This gives the schedule information for the conference" );
+        $page->addApi("http://localhost/api/schedule/:session", "Session information", "This gives detailed information regarding the session");
+        $page->addApi("http://localhost/api/presentations/", "Presentations for the conference", "This gives details regarding the listed presentations within the conference");
+        $page->addApi("http://localhost/api/presentations/search/:searchterm", "Search function", "This function returns the presentations that contain a given search term in the title or abstract ");
+        $page->addApi("http://localhost/api/presentations/category/:categoryname", "Category search", "This will return the presentations which contain the given search term in the title or abstract, within a selected category");
         echo $page->getPage();
         break;
     case 'about':
@@ -60,6 +65,7 @@ switch ($options['subject']){
         break;
     case 'api';
         header("Content-type: applicaton/json");
+        header("Access-Control-Allow-Origin: *");
         switch ($options['param1']){
             case 'schedule';
                 $response = new JSONRecordSet();

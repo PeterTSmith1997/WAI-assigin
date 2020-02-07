@@ -14,7 +14,7 @@
                 /*
                  * var to hold the data base url
                  */
-                var urlBase = '/localhost/api/';
+                var urlBase = 'http://localhost/api/';
 
                 /*
                  * method to retrieve courses, or, more accurately a promise which when
@@ -34,8 +34,7 @@
                         .then(function (response) {
                                 console.log(response);
                                 defer.resolve({
-                                    data: response.data.results,         // create data property with value from response
-                                    rowCount: response.data.courseCount  // create rowCount property with value from response
+                                    data: response.data.data.Results         // create data property with value from response
                                 });
                             },                                                 // another dot to chain to error()
                             function (err) {
