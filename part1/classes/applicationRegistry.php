@@ -49,14 +49,9 @@ Class ApplicationRegistry extends Registry {
         return self::instance()->get('dbname');
     }
 
-    public static function getUsername() {
-        return self::instance()->get('username');
+    public static function getJWTjey(){
+        return self::instance()->get('JWTKey');
     }
-
-    public static function getPassword() {
-        return self::instance()->get('password');
-    }
-
     public static function DB() {
         return pdoDB::getConnection();
     }

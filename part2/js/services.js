@@ -34,7 +34,7 @@
                         .then(function (response) {
                                 console.log(response);
                                 defer.resolve({
-                                    data: response.data.data.results         // create data property with value from response
+                                    data: response.data.data.Results         // create data property with value from response
                                 });
                             },                                                 // another dot to chain to error()
                             function (err) {
@@ -44,7 +44,23 @@
                     // by the .get method .success or .failure
                     return defer.promise;
                 };
-                
+
+               this.getPapers = function () {
+                   var defer = $q.defer(),
+                       paperUrl = urlBase + 'papers/';
+                   $http.get(paperUrl, {cache: true})
+                       .then(function (response) {
+                           console.log(response);
+                           defer.resolve({
+                               data: response.data.data.Results         // create data property with value from response
+                           });
+
+                       },
+                       function (err) {
+                           defer.reject(err);
+                       });
+                   return defer.promise;
+               }
             }
         ]
     );

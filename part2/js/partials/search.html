@@ -1,5 +1,5 @@
 Search: <input data-ng-model="query">
 
-<section data-ng-repeat="p in papers |filter:query as filtered">
+<section data-ng-repeat="p in papers |filter:query | limitTo:20 ">
 {{p.title}}
 </section>

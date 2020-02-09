@@ -39,6 +39,14 @@ if (isset($path[0])) {
 
         if (isset($path[2])) {
             $options['param1'] = $path[2];
+
+            if (isset($path[3])) {
+                $options{'param2'} = $path[3];
+
+                if (isset( $path[4])){
+                    $options['param3'] = $path[4];
+                }
+            }
         }
     }
 }
@@ -64,15 +72,21 @@ switch ($options['subject']){
         echo $page->getPage();
         break;
     case 'api';
-        header("Content-type: applicaton/json");
+//        header("Content-type: applicaton/json");
         header("Access-Control-Allow-Origin: *");
         switch ($options['param1']){
             case 'schedule';
                 $response = new JSONRecordSet();
+                $sql = "SELECT slots.day, sessions.id title, slotsID FROM sessions JOIN slots ON
+slotsID = slots.id";
+                $response = $response->getJSONRecordSet($sql);
+                echo $response;
+                break;
+            case 'papers';
+                $response = new JSONRecordSet();
                 $sql = "SELECT sessions.id, title, slotsID FROM sessions";
                 $response = $response->getJSONRecordSet($sql);
                 echo $response;
-
                 break;
             case 'presentations':
                 $response = new JSONRecordSet();
@@ -80,13 +94,48 @@ switch ($options['subject']){
                 $response = $response->getJSONRecordSet($sql);
                 echo $response;
             break;
+            case 'login';
+                $user = $options['param2'];
+                $pass = $options['param3'];
+                $sql = "SELECT password, admin FROM users WHERE username = :email";
+                $response = new JSONRecordSet();
+
+                 $response = $response->getJSONRecordSet($sql, array("email"=>$user));
+                $data = json_decode($response,1);
+                //echo $response;
+               // echo $data["status"];
+                // Check if no errors returned
+                if ($data["status"] !== "error") {
+                    $data = $data["data"]["Results"][0];
+                    //echo $data["password"];
+                    if (password_verify($pass, $data["password"])){
+                        $token = array();
+                        $token['user'] = $user;
+                        $token['admin'] = $data["admin"];
+
+                        $encodedToken = JWT::encode($token,ApplicationRegistry::getJWTjey());
+
+                        http_response_code(201);
+                        echo json_encode(array("message"=> "logged in", "token"=>$encodedToken));
+                    }
+                    else{
+                        echo json_encode(array("message"=>"unknown user/password"));
+
+                    }
+                }
+
+                else{
+                    echo json_encode(array("message"=>"unknown user/password"));
+
+                }
+            break;
             default:
                 //header("Content-type: applicaton/json", true, 404);
                 echo json_encode([
                     "status"=> "error",
                     "message"=> "endpoint not found"
                 ]);
-        }
+        }//end api case
         break;
     default:
         echo "404";

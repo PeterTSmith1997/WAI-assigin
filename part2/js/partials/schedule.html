@@ -1,3 +1,5 @@
 <section data-ng-repeat="schedule in schedules">
-    {{schedule.title}}, {{schedule.slotsID}}, {{schedule.id}}
+    <div class="Mon">
+        <p data-ng-if="schedule.day == 'Monday'">{{schedule.title}}</p>
+    </div>
 </section>
