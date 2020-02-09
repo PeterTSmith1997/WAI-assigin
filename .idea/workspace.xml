@@ -31,34 +31,6 @@
         <option name="myItemId" value="Sqlite (Xerial) - chi2019.sqlite" />
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="users" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="Sqlite (Xerial) - chi2019.sqlite" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="Sqlite (Xerial) - chi2019.sqlite" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="slots" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
     </PATH>
     <PATH>
       <PATH_ELEMENT>
@@ -116,20 +88,6 @@
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="Sqlite (Xerial) - chi2019.sqlite" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="activities" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -140,23 +98,28 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/part1/local-html/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="80" column="18" selection-start-line="80" selection-start-column="18" selection-end-line="80" selection-end-column="18" />
+            <state relative-caret-position="51">
+              <caret line="80" column="19" selection-start-line="80" selection-start-column="19" selection-end-line="80" selection-end-column="19" />
               <folding>
-                <marker date="1581280699791" expanded="true" signature="3051:3067" ph="SELECT sessi... sessions" />
-                <marker date="1581280699791" expanded="true" signature="3051:3142" ph="SELECT slots... sessions" />
-                <marker date="1581280699791" expanded="true" signature="3363:3411" ph="SELECT sessi... sessions" />
-                <marker date="1581280699791" expanded="true" signature="3906:3963" ph="SELECT passw... users" />
+                <marker date="1581287342477" expanded="true" signature="3051:3067" ph="SELECT sessi... sessions" />
+                <marker date="1581287342477" expanded="true" signature="3051:3143" ph="SELECT slots... sessions" />
+                <marker date="1581287342477" expanded="true" signature="3365:3422" ph="SELECT sessi... sessions" />
+                <marker date="1581287342477" expanded="true" signature="3917:3974" ph="SELECT passw... users" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/2ca26fa4-1e6d-49d2-8af0-284706131a76/console.sql">
-          <provider selected="true" editor-type-id="text-editor">
+      <file leaf-file-name="sessions" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/cc96284d/2ca26fa4-1e6d-49d2-8af0-284706131a76/sessions">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+          <provider editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="18" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -165,7 +128,7 @@
       <file leaf-file-name="webpagewithnav.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/part1/classes/webpagewithnav.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
+            <state relative-caret-position="187">
               <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
               <folding />
             </state>
@@ -175,18 +138,18 @@
       <file leaf-file-name="search.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/part2/js/partials/search.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="64" selection-start-line="2" selection-start-column="64" selection-end-line="2" selection-end-column="64" />
+            <state relative-caret-position="68">
+              <caret line="4" column="74" selection-start-line="4" selection-start-column="74" selection-end-line="4" selection-end-column="74" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="schedule.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="schedule.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/part2/js/partials/schedule.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+            <state relative-caret-position="68">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -195,21 +158,11 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/part2/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="26" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
+            <state relative-caret-position="612">
+              <caret line="36" column="7" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
               <folding>
-                <marker date="1581100329343" expanded="true" signature="56:537" ph="..." />
+                <marker date="1581286580761" expanded="true" signature="56:557" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="applicationRegistry.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/part1/classes/applicationRegistry.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
-              <caret line="52" column="47" selection-start-line="52" selection-start-column="47" selection-end-line="52" selection-end-column="47" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -217,7 +170,7 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/part2/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
+            <state relative-caret-position="289">
               <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
               <folding />
             </state>
@@ -227,20 +180,20 @@
       <file leaf-file-name="controllers.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/part2/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
+            <state relative-caret-position="680">
               <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="services.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="services.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/part2/js/services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="36" column="62" selection-start-line="36" selection-start-column="62" selection-end-line="36" selection-end-column="62" />
+            <state relative-caret-position="589">
+              <caret line="54" column="55" selection-start-line="54" selection-start-column="55" selection-end-line="54" selection-end-column="63" />
               <folding>
-                <marker date="1581279986071" expanded="true" signature="3272:3286" ph="{...}" />
+                <marker date="1581287226967" expanded="true" signature="3272:3286" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -267,15 +220,15 @@
         <option value="$PROJECT_DIR$/part1/.htaccess" />
         <option value="$PROJECT_DIR$/part1/config/setenv.php" />
         <option value="$PROJECT_DIR$/part2/js/app.js" />
-        <option value="$PROJECT_DIR$/part2/index.html" />
         <option value="$PROJECT_DIR$/part1/css/main.css" />
         <option value="$PROJECT_DIR$/part1/classes/bootstrapWebpage.php" />
         <option value="$PROJECT_DIR$/part1/config/config.xml" />
         <option value="$PROJECT_DIR$/part1/classes/applicationRegistry.php" />
-        <option value="$PROJECT_DIR$/part2/js/partials/search.html" />
         <option value="$PROJECT_DIR$/part2/js/controllers.js" />
-        <option value="$PROJECT_DIR$/part2/js/services.js" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/2ca26fa4-1e6d-49d2-8af0-284706131a76/console.sql" />
+        <option value="$PROJECT_DIR$/part2/js/partials/search.html" />
+        <option value="$PROJECT_DIR$/part2/index.html" />
+        <option value="$PROJECT_DIR$/part2/js/services.js" />
         <option value="$PROJECT_DIR$/part1/local-html/index.php" />
         <option value="$PROJECT_DIR$/part2/js/partials/schedule.html" />
       </list>
@@ -322,7 +275,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -484,6 +436,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -493,13 +446,13 @@
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\peter\Documents\GitHub\WAI Ass\part1" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\peter\Documents\GitHub\WAI Ass\part1\local-html" />
       <recent name="C:\Users\peter\Documents\GitHub\WAI Ass\part2\js" />
       <recent name="C:\Users\peter\Documents\GitHub\WAI Ass\part2" />
+      <recent name="C:\Users\peter\Documents\GitHub\WAI Ass\part1" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\peter\Documents\GitHub\WAI Ass\part1" />
     </key>
   </component>
@@ -574,33 +527,34 @@
       <workItem from="1581068926521" duration="924000" />
       <workItem from="1581069879249" duration="19000" />
       <workItem from="1581082743120" duration="1310000" />
-      <workItem from="1581268382351" duration="10067000" />
+      <workItem from="1581268382351" duration="10141000" />
+      <workItem from="1581284875910" duration="2718000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45775000" />
+    <option name="totallyTimeSpent" value="48567000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26279318" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26545843" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32942432" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -624,14 +578,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/part2/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="54" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/part2/js/partials/schedule.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -667,10 +613,10 @@
         <state relative-caret-position="1088">
           <caret line="64" column="25" selection-start-line="64" selection-start-column="18" selection-end-line="64" selection-end-column="25" />
           <folding>
-            <marker date="1581280699791" expanded="true" signature="3051:3067" ph="SELECT sessi... sessions" />
-            <marker date="1581280699791" expanded="true" signature="3051:3142" ph="SELECT slots... sessions" />
-            <marker date="1581280699791" expanded="true" signature="3363:3411" ph="SELECT sessi... sessions" />
-            <marker date="1581280699791" expanded="true" signature="3906:3963" ph="SELECT passw... users" />
+            <marker date="1581287342477" expanded="true" signature="3051:3067" ph="SELECT sessi... sessions" />
+            <marker date="1581287342477" expanded="true" signature="3051:3143" ph="SELECT slots... sessions" />
+            <marker date="1581287342477" expanded="true" signature="3365:3422" ph="SELECT sessi... sessions" />
+            <marker date="1581287342477" expanded="true" signature="3917:3974" ph="SELECT passw... users" />
           </folding>
         </state>
       </provider>
@@ -687,7 +633,7 @@
         <state relative-caret-position="357">
           <caret line="21" column="88" selection-start-line="21" selection-start-column="88" selection-end-line="21" selection-end-column="88" />
           <folding>
-            <marker date="1581100329343" expanded="true" signature="56:537" ph="..." />
+            <marker date="1581286580761" expanded="true" signature="56:557" ph="..." />
           </folding>
         </state>
       </provider>
@@ -727,10 +673,10 @@
         <state relative-caret-position="357">
           <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
           <folding>
-            <marker date="1581280699791" expanded="true" signature="3051:3067" ph="SELECT sessi... sessions" />
-            <marker date="1581280699791" expanded="true" signature="3051:3142" ph="SELECT slots... sessions" />
-            <marker date="1581280699791" expanded="true" signature="3363:3411" ph="SELECT sessi... sessions" />
-            <marker date="1581280699791" expanded="true" signature="3906:3963" ph="SELECT passw... users" />
+            <marker date="1581287342477" expanded="true" signature="3051:3067" ph="SELECT sessi... sessions" />
+            <marker date="1581287342477" expanded="true" signature="3051:3143" ph="SELECT slots... sessions" />
+            <marker date="1581287342477" expanded="true" signature="3365:3422" ph="SELECT sessi... sessions" />
+            <marker date="1581287342477" expanded="true" signature="3917:3974" ph="SELECT passw... users" />
           </folding>
         </state>
       </provider>
@@ -747,7 +693,7 @@
         <state relative-caret-position="306">
           <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
           <folding>
-            <marker date="1581100329343" expanded="true" signature="56:537" ph="..." />
+            <marker date="1581286580761" expanded="true" signature="56:557" ph="..." />
           </folding>
         </state>
       </provider>
@@ -787,10 +733,10 @@
         <state relative-caret-position="1003">
           <caret line="59" column="14" selection-start-line="59" selection-start-column="14" selection-end-line="59" selection-end-column="14" />
           <folding>
-            <marker date="1581280699791" expanded="true" signature="3051:3067" ph="SELECT sessi... sessions" />
-            <marker date="1581280699791" expanded="true" signature="3051:3142" ph="SELECT slots... sessions" />
-            <marker date="1581280699791" expanded="true" signature="3363:3411" ph="SELECT sessi... sessions" />
-            <marker date="1581280699791" expanded="true" signature="3906:3963" ph="SELECT passw... users" />
+            <marker date="1581287342477" expanded="true" signature="3051:3067" ph="SELECT sessi... sessions" />
+            <marker date="1581287342477" expanded="true" signature="3051:3143" ph="SELECT slots... sessions" />
+            <marker date="1581287342477" expanded="true" signature="3365:3422" ph="SELECT sessi... sessions" />
+            <marker date="1581287342477" expanded="true" signature="3917:3974" ph="SELECT passw... users" />
           </folding>
         </state>
       </provider>
@@ -800,7 +746,7 @@
         <state relative-caret-position="306">
           <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
           <folding>
-            <marker date="1581100329343" expanded="true" signature="56:537" ph="..." />
+            <marker date="1581286580761" expanded="true" signature="56:557" ph="..." />
           </folding>
         </state>
       </provider>
@@ -840,10 +786,10 @@
         <state relative-caret-position="1003">
           <caret line="59" column="14" selection-start-line="59" selection-start-column="14" selection-end-line="59" selection-end-column="14" />
           <folding>
-            <marker date="1581280699791" expanded="true" signature="3051:3067" ph="SELECT sessi... sessions" />
-            <marker date="1581280699791" expanded="true" signature="3051:3142" ph="SELECT slots... sessions" />
-            <marker date="1581280699791" expanded="true" signature="3363:3411" ph="SELECT sessi... sessions" />
-            <marker date="1581280699791" expanded="true" signature="3906:3963" ph="SELECT passw... users" />
+            <marker date="1581287342477" expanded="true" signature="3051:3067" ph="SELECT sessi... sessions" />
+            <marker date="1581287342477" expanded="true" signature="3051:3143" ph="SELECT slots... sessions" />
+            <marker date="1581287342477" expanded="true" signature="3365:3422" ph="SELECT sessi... sessions" />
+            <marker date="1581287342477" expanded="true" signature="3917:3974" ph="SELECT passw... users" />
           </folding>
         </state>
       </provider>
@@ -853,7 +799,7 @@
         <state relative-caret-position="255">
           <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
           <folding>
-            <marker date="1581100329343" expanded="true" signature="56:537" ph="..." />
+            <marker date="1581286580761" expanded="true" signature="56:557" ph="..." />
           </folding>
         </state>
       </provider>
@@ -921,7 +867,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/part1/classes/applicationRegistry.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
+        <state relative-caret-position="884">
           <caret line="52" column="47" selection-start-line="52" selection-start-column="47" selection-end-line="52" selection-end-column="47" />
           <folding />
         </state>
@@ -968,7 +914,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -982,7 +927,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/part1/classes/webpagewithnav.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
+        <state relative-caret-position="187">
           <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
           <folding />
         </state>
@@ -990,7 +935,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/part2/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
+        <state relative-caret-position="289">
           <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
           <folding />
         </state>
@@ -998,50 +943,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/part2/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
+        <state relative-caret-position="680">
           <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/part2/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="26" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
-          <folding>
-            <marker date="1581100329343" expanded="true" signature="56:537" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/part2/js/partials/search.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="64" selection-start-line="2" selection-start-column="64" selection-end-line="2" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/part2/js/services.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="36" column="62" selection-start-line="36" selection-start-column="62" selection-end-line="36" selection-end-column="62" />
-          <folding>
-            <marker date="1581279986071" expanded="true" signature="3272:3286" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/part1/local-html/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="80" column="18" selection-start-line="80" selection-start-column="18" selection-end-line="80" selection-end-column="18" />
-          <folding>
-            <marker date="1581280699791" expanded="true" signature="3051:3067" ph="SELECT sessi... sessions" />
-            <marker date="1581280699791" expanded="true" signature="3051:3142" ph="SELECT slots... sessions" />
-            <marker date="1581280699791" expanded="true" signature="3363:3411" ph="SELECT sessi... sessions" />
-            <marker date="1581280699791" expanded="true" signature="3906:3963" ph="SELECT passw... users" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1053,11 +957,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/part2/js/partials/search.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="74" selection-start-line="4" selection-start-column="74" selection-end-line="4" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/cc96284d/2ca26fa4-1e6d-49d2-8af0-284706131a76/sessions">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/part2/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="7" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
+          <folding>
+            <marker date="1581286580761" expanded="true" signature="56:557" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/part2/js/partials/schedule.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+        <state relative-caret-position="68">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/part1/local-html/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="80" column="19" selection-start-line="80" selection-start-column="19" selection-end-line="80" selection-end-column="19" />
+          <folding>
+            <marker date="1581287342477" expanded="true" signature="3051:3067" ph="SELECT sessi... sessions" />
+            <marker date="1581287342477" expanded="true" signature="3051:3143" ph="SELECT slots... sessions" />
+            <marker date="1581287342477" expanded="true" signature="3365:3422" ph="SELECT sessi... sessions" />
+            <marker date="1581287342477" expanded="true" signature="3917:3974" ph="SELECT passw... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/part2/js/services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="54" column="55" selection-start-line="54" selection-start-column="55" selection-end-line="54" selection-end-column="63" />
+          <folding>
+            <marker date="1581287226967" expanded="true" signature="3272:3286" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
