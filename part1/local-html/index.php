@@ -78,8 +78,8 @@ switch ($options['subject']){
             case 'schedule';
                 $response = new JSONRecordSet();
                 $sql = "SELECT slots.day, sessions.id, title, slotsID FROM sessions JOIN slots ON
-slotsID = slots.id ";
-                $response = $response->getJSONRecordSet($sql);
+slotsID = slots.id WHERE slots.day = :day";
+                $response = $response->getJSONRecordSet($sql, array("day"=> $options['param2']));
                 echo $response;
                 break;
             case 'papers';
@@ -129,6 +129,14 @@ slotsID = slots.id ";
 
                 }
             break;
+            case 'days':
+
+                $response = new JSONRecordSet();
+                $sql = "SELECT DISTINCT slots.day FROM slots";
+                $response = $response->getJSONRecordSet($sql);
+                echo $response;
+                break;
+
             default:
                 //header("Content-type: applicaton/json", true, 404);
                 echo json_encode([

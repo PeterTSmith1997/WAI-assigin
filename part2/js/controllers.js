@@ -28,12 +28,14 @@
 
                 '$scope', // angular variable as a string
                 'dataService',
-               function ($scope, dataService) {
-                var getSchedules = function () {
-                    dataService.getSchedules().then(  // then() is called when the promise is resolve or rejected
+                '$location',
+                '$routeParams',
+               function ($scope, dataService, $routeParams, $location) {
+                    console.log($routeParams);
+                var getSchedules = function (day) {
+                    dataService.getSchedules(day).then(  // then() is called when the promise is resolve or rejected
                         function(response){
                             console.log(response);
-
                             $scope.schedules = response.data;
                         },
                         function(err){
@@ -44,8 +46,11 @@
                         }
                     ); // end of getCourses().then
                 };
-
-                getSchedules();  // call the method just defined
+                   getSchedules($routeParams.day);
+                if ($routeParams && $routeParams.day){
+                    console.log($routeParams.day);
+                    getSchedules("Monday");
+                }
 
                 }
             ]).
@@ -74,7 +79,44 @@
                 getPapers();  // call the method just defined
 
             }
-        ])
+        ]).
+        controller('daysController',
+        [
+
+            '$scope',               // angular variable as a string
+            'dataService',
+            '$location',
+            function ($scope, dataService, $location) {
+                var getDays = function () {
+                    dataService.getDays().then(
+                        function (response) {
+                            console.log(response);
+
+                            $scope.days = response.data;
+                        },
+                        function (err) {
+                            $scope.status = 'Unable to load data ' + err;
+                        },
+                        function (notify) {
+                            console.log(notify);
+                        }
+                    ); // end of getCourses().then
+                };
+
+                var dayInfo = $location.path().substr(1).split('/');
+                if (dayInfo.length === 2) {
+                    // use the course code from the path and assign to
+                    // selectedCourse so if the page is reloaded it's highlighted
+                    $scope.selectedDay = {day: dayInfo[1]};
+                }
+                $scope.selectDay = function($event, day){
+                     $scope.selectedDay = day;
+                     $location.path('/Schedule/' + day.day);
+                };
+
+                getDays();  // call the method just defined
+            }
+                ])
 
 
 }());

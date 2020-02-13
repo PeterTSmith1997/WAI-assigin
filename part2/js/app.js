@@ -19,10 +19,14 @@
                 $routeProvider.when('/search',{
                     templateUrl: "js/partials/search.html"
                 })
-                .when('Schedule',{
-                    templateUrl: "js/partials/schedule.html",
-                    controller: "ScheduleController"
-                    }
+                    .when('/Schedule/:day',{
+                        templateUrl: "js/partials/schedule.html",
+                        controller: "Schedule"
+                    })
+                    .when('days',{
+                        templateUrl: "js/partials/days.html",
+                        controller: "daysController"
+                        }
 
                 )
                 .otherwise({

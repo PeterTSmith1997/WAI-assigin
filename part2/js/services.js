@@ -20,17 +20,10 @@
                  * method to retrieve courses, or, more accurately a promise which when
                  * fulfilled calls the success method
                  */
-                this.getSchedules = function () {
+                this.getSchedules = function (day) {
                     var defer = $q.defer(),             // The promise
-                        scheduleUrl = urlBase + 'schedule/'; // add the static file containing courses to the base url
-                    /**
-                     * make an ajax get call
-                     * chain calls to .success and .error which will resolve or reject the promise
-                     * @param {string} urlBase The url to call, later we'll to this to pass parameters
-                     * @param {object} config a configuration object, can contain parameters to pass, in this case we set cache to true
-                     * @return {object} promise The call returns, not data, but a promise which only if the call is successful is 'honoured'
-                     */
-                    $http.get(scheduleUrl, {cache: true})                          // notice the dot to start the chain to success()
+                        scheduleUrl = urlBase + 'schedule/'+day; // add the static file containing courses to the base url
+                    $http.get(scheduleUrl, {cache: false})                          // notice the dot to start the chain to success()
                         .then(function (response) {
                                 console.log(response);
                                 defer.resolve({
@@ -60,7 +53,25 @@
                            defer.reject(err);
                        });
                    return defer.promise;
-               }
+               };
+
+               this.getDays = function () {
+
+                   var defer = $q.defer(),
+                       daysUrl = urlBase + 'days/';
+                   $http.get(daysUrl, {cache: true})
+                       .then(function (response) {
+                               console.log(response);
+                               defer.resolve({
+                                   data: response.data.data.Results         // create data property with value from response
+                               });
+
+                           },
+                           function (err) {
+                               defer.reject(err);
+                           });
+                   return defer.promise;
+               };
             }
         ]
     );
