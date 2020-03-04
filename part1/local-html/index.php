@@ -65,6 +65,8 @@ switch ($options['subject']){
         $page->addApi("http://localhost/api/presentations/", "Presentations for the conference", "This gives details regarding the listed presentations within the conference");
         $page->addApi("http://localhost/api/presentations/search/:searchterm", "Search function", "This function returns the presentations that contain a given search term in the title or abstract ");
         $page->addApi("http://localhost/api/presentations/category/:categoryname", "Category search", "This will return the presentations which contain the given search term in the title or abstract, within a selected category");
+        $page->addApi("http://localhost/api/login/Param1/Param2","login","Login API 
+        Where Param1 is username and param2 is password");
         echo $page->getPage();
         break;
     case 'about':
@@ -95,38 +97,39 @@ slotsID = slots.id WHERE slots.day = :day";
                 echo $response;
             break;
             case 'login';
-                $user = $options['param2'];
-                $pass = $options['param3'];
-                $sql = "SELECT password, admin FROM users WHERE username = :email";
-                $response = new JSONRecordSet();
+                if(isset($options['param2']) and ( !$options['param3']==="")) {
+                    $user = $options['param2'];
+                    $pass = $options['param3'];
+                    $sql = "SELECT password, admin FROM users WHERE username = :email";
+                    $response = new JSONRecordSet();
 
-                 $response = $response->getJSONRecordSet($sql, array("email"=>$user));
-                $data = json_decode($response,1);
-                //echo $response;
-               // echo $data["status"];
-                // Check if no errors returned
-                if ($data["status"] !== "error") {
-                    $data = $data["data"]["Results"][0];
-                    //echo $data["password"];
-                    if (password_verify($pass, $data["password"])){
-                        $token = array();
-                        $token['user'] = $user;
-                        $token['admin'] = $data["admin"];
+                    $response = $response->getJSONRecordSet($sql, array("email" => $user));
+                    $data = json_decode($response, 1);
+                    //echo $response;
+                    // echo $data["status"];
+                    // Check if no errors returned
+                    if ($data["status"] !== "error") {
+                        $data = $data["data"]["Results"][0];
+                        //echo $data["password"];
+                        if (password_verify($pass, $data["password"])) {
+                            $token = array();
+                            $token['user'] = $user;
+                            $token['admin'] = $data["admin"];
 
-                        $encodedToken = JWT::encode($token,ApplicationRegistry::getJWTjey());
+                            $encodedToken = JWT::encode($token, ApplicationRegistry::getJWTjey());
 
-                        http_response_code(201);
-                        echo json_encode(array("message"=> "logged in", "token"=>$encodedToken));
-                    }
-                    else{
-                        echo json_encode(array("message"=>"unknown user/password"));
+                            http_response_code(201);
+                            echo json_encode(array("message" => "logged in", "token" => $encodedToken));
+                        } else {
+                            echo json_encode(array("message" => "unknown user/password"));
 
+                        }
+                    } else {
+                        echo json_encode(array("message" => "unknown user/password"));
                     }
                 }
-
                 else{
-                    echo json_encode(array("message"=>"unknown user/password"));
-
+                    echo json_encode(array("message" => "username or  password not set"));
                 }
             break;
             case 'days':

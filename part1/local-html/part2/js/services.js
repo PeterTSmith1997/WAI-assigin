@@ -21,6 +21,7 @@
                  * fulfilled calls the success method
                  */
                 this.getSchedules = function (day) {
+                    console.log("abot to call defar");
                     var defer = $q.defer(),             // The promise
                         scheduleUrl = urlBase + 'schedule/'+day; // add the static file containing courses to the base url
                     $http.get(scheduleUrl, {cache: false})                          // notice the dot to start the chain to success()
@@ -35,6 +36,8 @@
                             });
                     // the call to getCourses returns this promise which is fulfilled
                     // by the .get method .success or .failure
+                    console.log(scheduleUrl);
+
                     return defer.promise;
                 };
 

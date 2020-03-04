@@ -28,11 +28,11 @@
 
                 '$scope', // angular variable as a string
                 'dataService',
-                '$location',
                 '$routeParams',
-               function ($scope, dataService, $routeParams, $location) {
+               function ($scope, dataService, $routeParams) {
                     console.log($routeParams);
                 var getSchedules = function (day) {
+                    console.log(day);
                     dataService.getSchedules(day).then(  // then() is called when the promise is resolve or rejected
                         function(response){
                             console.log(response);
@@ -46,10 +46,14 @@
                         }
                     ); // end of getCourses().then
                 };
+                console.log($routeParams.day);
+
                    getSchedules($routeParams.day);
+
+                   getSchedules($routeParams);
                 if ($routeParams && $routeParams.day){
                     console.log($routeParams.day);
-                    getSchedules("Monday");
+                    getSchedules($routeParams.day);
                 }
 
                 }
@@ -103,15 +107,9 @@
                     ); // end of getCourses().then
                 };
 
-                var dayInfo = $location.path().substr(1).split('/');
-                if (dayInfo.length === 2) {
-                    // use the course code from the path and assign to
-                    // selectedCourse so if the page is reloaded it's highlighted
-                    $scope.selectedDay = {day: dayInfo[1]};
-                }
-                $scope.selectDay = function($event, day){
-                     $scope.selectedDay = day;
-                     $location.path('/Schedule/' + day.day);
+                $scope.selectDay = function ($event, day) {
+                    $scope.selectedDay = day;
+                    $location.path('/Schedule/' + day.day);
                 };
 
                 getDays();  // call the method just defined
