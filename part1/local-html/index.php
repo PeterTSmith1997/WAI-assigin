@@ -79,9 +79,16 @@ switch ($options['subject']){
         switch ($options['param1']){
             case 'schedule';
                 $response = new JSONRecordSet();
-                $sql = "SELECT slots.day, sessions.id, title, slotsID FROM sessions JOIN slots ON
-slotsID = slots.id WHERE slots.day = :day";
-                $response = $response->getJSONRecordSet($sql, array("day"=> $options['param2']));
+                if ($options['param2']!="") {
+                    $sql = "SELECT slots.day, sessions.id, sessions.title, sessions.room, slotsID, slots.time FROM sessions JOIN slots ON
+slotsID = slots.id WHERE slots.day = :day ORDER BY slots.time";
+                    $response = $response->getJSONRecordSet($sql, array("day" => $options['param2']));
+                }
+                else{
+                    $sql = "SELECT slots.day, sessions.id, sessions.title, sessions.room, slotsID, slots.time FROM sessions JOIN slots ON
+slotsID = slots.id ORDER BY slots.time";
+                   $response = $response->getJSONRecordSet($sql);
+                }
                 echo $response;
                 break;
             case 'papers';

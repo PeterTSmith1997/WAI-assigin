@@ -28,7 +28,8 @@
                         .then(function (response) {
                                 console.log(response);
                                 defer.resolve({
-                                    data: response.data.data.Results         // create data property with value from response
+                                    data: response.data.data.Results,         // create data property with value from response
+                                    count: response.data.data.RowCount
                                 });
                             },                                                 // another dot to chain to error()
                             function (err) {

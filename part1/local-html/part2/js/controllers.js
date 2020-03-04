@@ -37,6 +37,8 @@
                         function(response){
                             console.log(response);
                             $scope.schedules = response.data;
+                            $scope.sesscCount = response.count;
+
                         },
                         function(err){
                             $scope.status = 'Unable to load data ' + err;
@@ -51,6 +53,7 @@
                    getSchedules($routeParams.day);
 
                    getSchedules($routeParams);
+                   getSchedules("Monday");
                 if ($routeParams && $routeParams.day){
                     console.log($routeParams.day);
                     getSchedules($routeParams.day);
