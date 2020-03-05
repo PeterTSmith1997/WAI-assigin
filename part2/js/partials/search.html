@@ -1,0 +1,8 @@
+<div class="container md-4 offset-4">
+            <div class="md form">
+                <input data-ng-model="query" class="form-control">
+            </div>
+            <section data-ng-repeat="p in papers |filter:query | limitTo:5 ">
+                {{p.title}}
+            </section>
+</div>

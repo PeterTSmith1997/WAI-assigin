@@ -1,5 +1,5 @@
 <?php
-define('CONFIGLOCATION', './../config/config.xml');
+define('CONFIGLOCATION', './config/config.xml');
 
 // turn on all possible errors
 error_reporting(-1);

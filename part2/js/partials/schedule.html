@@ -1,0 +1,13 @@
+<p>There are {{sesscCount}} on</p>
+<table>
+        <tr>
+                <th>title</th>
+                <th>Time</th>
+                <th>Location</th>
+        </tr>
+        <tr data-ng-repeat="schedule in schedules">
+                <td>{{schedule.title}}</td>
+                <td>{{schedule.time}}</td>
+                <td>{{schedule.room}}</td>
+        </tr>
+</table>

@@ -1,4 +1,4 @@
 <config>
    <JWTKey>IloveWAI</JWTKey>
-   <dbname>sqlite:./../db/chi2019.sqlite</dbname>
+   <dbname>sqlite:./db/chi2019.sqlite</dbname>
 </config>
