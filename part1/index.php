@@ -74,25 +74,29 @@ switch ($options['subject']){
         echo $page->getPage();
         break;
     case 'api';
-        header("Access-Control-Allow-Origin: *");
-        header("Access-Control-Allow-Methods: GET");
-//        header("Content-type: applicaton/json");
+        if ((($_SERVER['REQUEST_METHOD'] == 'POST') ||
+                ($_SERVER['REQUEST_METHOD'] == 'PUT') ||
+                ($_SERVER['REQUEST_METHOD'] == 'DELETE')) &&
+            (strpos($_SERVER['CONTENT_TYPE'], 'application/json') !== false)) {
 
-        $inputPHP = json_decode(file_get_contents('php://input'), true);
+            $input = json_decode(file_get_contents('php://input'), true);
+            $data = isset($input['data']) ? $input['data'] : null;
+        }
+//        header("Content-type: applicaton/json");
+        header("Access-Control-Allow-Origin: *");
         switch ($options['param1']){
             case 'schedule';
                 $response = new JSONRecordSet();
-                if (!isset($inputPHP)) {
-                    var_dump($inputPHP)    ;
-                    $inputPHP = json_decode($inputPHP);
+                if (isset($data)) {
+                    $data = json_decode($data);
                     $sql = "SELECT slots.day, sessions.id, sessions.title, sessions.room, slotsID, slots.time FROM sessions JOIN slots ON
 slotsID = slots.id WHERE slots.day = :day ORDER BY slots.time";
-                    $response = $response->getJSONRecordSet($sql, array("day" => $inputPHP->day));
+                    $response = $response->getJSONRecordSet($sql, array("day" => $data->day));
                 }
                 else{
                     $sql = "SELECT slots.day, sessions.id, sessions.title, sessions.room, slotsID, slots.time FROM sessions JOIN slots ON
 slotsID = slots.id ORDER BY slots.time";
-                   $response = $response->getJSONRecordSet($sql);
+                    $response = $response->getJSONRecordSet($sql);
                 }
                 echo $response;
                 break;
@@ -107,25 +111,26 @@ slotsID = slots.id ORDER BY slots.time";
                 $sql = "Select from ";
                 $response = $response->getJSONRecordSet($sql);
                 echo $response;
-            break;
+                break;
             case 'login';
-                if(isset($inputPHP)) {
-                    $inputPHP = json_decode($inputPHP);
+                if(isset($options['param2']) and ( !$options['param3']==="")) {
+                    $user = $options['param2'];
+                    $pass = $options['param3'];
                     $sql = "SELECT password, admin FROM users WHERE username = :email";
                     $response = new JSONRecordSet();
 
-                    $response = $response->getJSONRecordSet($sql, array("email" => $inputPHP->user));
-                    $queryData = json_decode($response, 1);
+                    $response = $response->getJSONRecordSet($sql, array("email" => $user));
+                    $data = json_decode($response, 1);
                     //echo $response;
                     // echo $data["status"];
                     // Check if no errors returned
-                    if ($queryData["status"] !== "error") {
-                        $queryData = $queryData["data"]["Results"][0];
+                    if ($data["status"] !== "error") {
+                        $data = $data["data"]["Results"][0];
                         //echo $data["password"];
-                        if (password_verify($inputPHP->pass, $queryData["password"])) {
+                        if (password_verify($pass, $data["password"])) {
                             $token = array();
-                            $token['user'] = $inputPHP->user;
-                            $token['admin'] = $queryData["admin"];
+                            $token['user'] = $user;
+                            $token['admin'] = $data["admin"];
 
                             $encodedToken = JWT::encode($token, ApplicationRegistry::getJWTjey());
 
@@ -142,7 +147,7 @@ slotsID = slots.id ORDER BY slots.time";
                 else{
                     echo json_encode(array("message" => "username or  password not set"));
                 }
-            break;
+                break;
             case 'days':
 
                 $response = new JSONRecordSet();
