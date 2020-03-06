@@ -79,19 +79,22 @@ switch ($options['subject']){
                 ($_SERVER['REQUEST_METHOD'] == 'DELETE')) &&
             (strpos($_SERVER['CONTENT_TYPE'], 'application/json') !== false)) {
 
-            $input = json_decode(file_get_contents('php://input'), true);
-            $data = isset($input['data']) ? $input['data'] : null;
         }
-//        header("Content-type: applicaton/json");
+        $input = json_decode(file_get_contents('php://input'), true);
+        $data = isset($input['data']) ? $input['data'] : null;
+
+   //     header("Content-type: applicaton/json");
         header("Access-Control-Allow-Origin: *");
         switch ($options['param1']){
             case 'schedule';
                 $response = new JSONRecordSet();
+
                 if (isset($data)) {
-                    $data = json_decode($data);
+
+//                    $data = json_decode($data);
                     $sql = "SELECT slots.day, sessions.id, sessions.title, sessions.room, slotsID, slots.time FROM sessions JOIN slots ON
 slotsID = slots.id WHERE slots.day = :day ORDER BY slots.time";
-                    $response = $response->getJSONRecordSet($sql, array("day" => $data->day));
+                    $response = $response->getJSONRecordSet($sql, array("day" => $data["day"]));
                 }
                 else{
                     $sql = "SELECT slots.day, sessions.id, sessions.title, sessions.room, slotsID, slots.time FROM sessions JOIN slots ON
@@ -113,24 +116,23 @@ slotsID = slots.id ORDER BY slots.time";
                 echo $response;
                 break;
             case 'login';
-                if(isset($options['param2']) and ( !$options['param3']==="")) {
-                    $user = $options['param2'];
-                    $pass = $options['param3'];
+                if(true) {
+                    $user = $data["user"];
+                    $pass = $data["pass"];
                     $sql = "SELECT password, admin FROM users WHERE username = :email";
                     $response = new JSONRecordSet();
 
                     $response = $response->getJSONRecordSet($sql, array("email" => $user));
-                    $data = json_decode($response, 1);
-                    //echo $response;
+                    $dataResponse = json_decode($response, 1);
                     // echo $data["status"];
                     // Check if no errors returned
-                    if ($data["status"] !== "error") {
-                        $data = $data["data"]["Results"][0];
+                    if ($dataResponse["status"] !== "error") {
+                        $dataResponse = $dataResponse["data"]["Results"][0];
                         //echo $data["password"];
-                        if (password_verify($pass, $data["password"])) {
+                        if (password_verify($pass, $dataResponse["password"])) {
                             $token = array();
                             $token['user'] = $user;
-                            $token['admin'] = $data["admin"];
+                            $token['admin'] = $dataResponse["admin"];
 
                             $encodedToken = JWT::encode($token, ApplicationRegistry::getJWTjey());
 

@@ -13,10 +13,12 @@
 <script type="text/javascript">
 
     let myJSON = {"data":
-                    {"day":"Monday"}
+                    {"user":"John",
+                      "pass":"johnpassword"
+                    }
                 };
     console.log(myJSON);
-    fetch('http://localhost/WAI-assigin/part1/api/schedule/', {
+    fetch('http://localhost/WAI-assigin/part1/api/login/', {
         method: 'POST',
         headers : new Headers(),
         body:JSON.stringify(myJSON)})

@@ -22,10 +22,12 @@
                  */
                 this.getSchedules = function (day) {
                     console.log("abot to call defar");
+                    console.log(day);
                     var defer = $q.defer(),             // The promise
-                        data = {day: day},
+                        data =
+                        {"day": day},
                         scheduleUrl = urlBase + 'schedule/'; // add the static file containing courses to the base url
-                    $http.get(scheduleUrl, {params: data, cache: false})                          // notice the dot to start the chain to success()
+                    $http.get(scheduleUrl,data)                          // notice the dot to start the chain to success()
                         .then(function (response) {
                                 console.log(response);
                                 defer.resolve({

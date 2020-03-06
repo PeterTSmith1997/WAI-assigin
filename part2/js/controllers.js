@@ -31,10 +31,9 @@
                 '$routeParams',
                function ($scope, dataService, $routeParams) {
                    console.log($routeParams);
-                   console.log($routeParams.day);
+                   console.log($routeParams.dayid);
 
                    var getSchedules = function (day) {
-                    console.log(day.day);
                     dataService.getSchedules(day).then(  // then() is called when the promise is resolve or rejected
                         function(response){
                             console.log(response);
@@ -50,14 +49,13 @@
                         }
                     ); // end of getCourses().then
                 };
-                getSchedules("Monday");
-                console.log($routeParams.day);
+   //             getSchedules("Monday");
+                console.log($routeParams.dayid);
 
- //                  getSchedules($routeParams.day);
 
-                if ($routeParams && $routeParams.day){
-                    console.log($routeParams.day);
-                    getSchedules($routeParams.day);
+                if ($routeParams && $routeParams.dayid){
+                    console.log($routeParams.dayid);
+                    getSchedules($routeParams.dayid);
                 }
 
                 }
