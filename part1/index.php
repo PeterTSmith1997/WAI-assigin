@@ -83,7 +83,7 @@ switch ($options['subject']){
         $input = json_decode(file_get_contents('php://input'), true);
         $data = isset($input['data']) ? $input['data'] : null;
 
-   //     header("Content-type: applicaton/json");
+        header("Content-type: applicaton/json");
         header("Access-Control-Allow-Origin: *");
         switch ($options['param1']){
             case 'schedule';
@@ -157,6 +157,39 @@ slotsID = slots.id ORDER BY slots.time";
                 $response = $response->getJSONRecordSet($sql);
                 echo $response;
                 break;
+            case 'update':
+                $token = $data["token"];
+                $id = $data["id"];
+                $newChair = $data["chair"];
+
+                $tokenDecoded = JWT::decode($token, ApplicationRegistry::getJWTjey());
+                if ($tokenDecoded->admin == true){
+                    $sql = "UPDATE sessions SET chair = :chair WHERE id = :id";
+
+                    $params = array(":chair"=>$newChair, ":id"=>$id);
+                    $dbConn = pdoDB::getConnection();
+
+                    $queryResult = $dbConn->prepare($sql);
+                    $success = $queryResult->execute($params);
+
+                    // $wasupdated will tell us if anything was updated
+                    $wasupdated = ($queryResult->rowCount() > 0 ? true : false);
+
+
+                    $dbConn = null;
+
+                    http_response_code(201);
+                    echo json_encode(array("message" => "database updated", "success"=>$success, "updated"=>$wasupdated));
+
+                } else {
+                    http_response_code(403);
+                    echo json_encode(array("message" => "authentiaction required", "success"=>false));
+                }
+
+
+                break;
+
+
 
             default:
                 //header("Content-type: applicaton/json", true, 404);

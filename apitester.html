@@ -13,12 +13,13 @@
 <script type="text/javascript">
 
     let myJSON = {"data":
-                    {"user":"John",
-                      "pass":"johnpassword"
+                    {"token":"16i",
+                     "id":"1",
+                      "chair":"TBA"
                     }
                 };
     console.log(myJSON);
-    fetch('http://localhost/WAI-assigin/part1/api/login/', {
+    fetch('http://localhost/WAI-assigin/part1/api/update/', {
         method: 'POST',
         headers : new Headers(),
         body:JSON.stringify(myJSON)})

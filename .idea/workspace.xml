@@ -32,9 +32,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/part1/index.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state relative-caret-position="671">
               <caret line="125" column="62" selection-start-line="125" selection-start-column="62" selection-end-line="125" selection-end-column="62" />
               <folding>
@@ -43,6 +44,16 @@
                 <marker date="1583505036513" expanded="true" signature="4456:4513" ph="SELECT sessi... sessions" />
                 <marker date="1583505036513" expanded="true" signature="5041:5098" ph="SELECT passw... users" />
                 <marker date="1583505036513" expanded="true" signature="6664:6700" ph="SELECT DISTI... slots" />
+=======
+            <state relative-caret-position="748">
+              <caret line="118" column="4" selection-start-line="118" selection-start-column="4" selection-end-line="118" selection-end-column="4" />
+              <folding>
+                <marker date="1583679002963" expanded="true" signature="3729:3900" ph="SELECT slots... sessions" />
+                <marker date="1583679002963" expanded="true" signature="4066:4214" ph="SELECT slots... sessions" />
+                <marker date="1583679002963" expanded="true" signature="4457:4514" ph="SELECT sessi... sessions" />
+                <marker date="1583679002963" expanded="true" signature="5105:5162" ph="SELECT passw... users" />
+                <marker date="1583679002963" expanded="true" signature="6718:6754" ph="SELECT DISTI... slots" />
+>>>>>>> Stashed changes
               </folding>
             </state>
           </provider>
@@ -58,6 +69,7 @@
           </provider>
         </entry>
       </file>
+<<<<<<< Updated upstream
       <file leaf-file-name="schedule.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/part2/js/partials/schedule.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -83,6 +95,33 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
               <caret line="35" column="54" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="54" />
+=======
+      <file leaf-file-name="controllers.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/part2/js/controllers.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="680">
+              <caret line="40" column="60" selection-start-line="40" selection-start-column="60" selection-end-line="40" selection-end-column="60" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="schedule.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/part2/js/partials/schedule.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="days.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/part2/js/partials/days.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="21" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="21" />
+>>>>>>> Stashed changes
               <folding />
             </state>
           </provider>
@@ -101,8 +140,13 @@
       <file leaf-file-name="services.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/part2/js/services.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state relative-caret-position="136">
               <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+=======
+            <state relative-caret-position="408">
+              <caret line="24" column="70" selection-start-line="24" selection-start-column="70" selection-end-line="25" selection-end-column="42" />
+>>>>>>> Stashed changes
               <folding />
             </state>
           </provider>
@@ -123,10 +167,15 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< Updated upstream
         <option value="$PROJECT_DIR$/part2/index.html" />
         <option value="$PROJECT_DIR$/part2/js/partials/days.html" />
         <option value="$PROJECT_DIR$/part2/js/controllers.js" />
+=======
+>>>>>>> Stashed changes
         <option value="$PROJECT_DIR$/apitester.html" />
+        <option value="$PROJECT_DIR$/part2/js/controllers.js" />
+        <option value="$PROJECT_DIR$/part2/js/partials/days.html" />
         <option value="$PROJECT_DIR$/part1/index.php" />
         <option value="$PROJECT_DIR$/part2/js/services.js" />
       </list>
@@ -279,8 +328,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -336,21 +385,34 @@
       <updated>1583430584212</updated>
       <workItem from="1583430592258" duration="6496000" />
       <workItem from="1583439356750" duration="206000" />
+<<<<<<< Updated upstream
       <workItem from="1583440150411" duration="668000" />
       <workItem from="1583487901481" duration="3490000" />
       <workItem from="1583498844706" duration="6290000" />
+=======
+      <workItem from="1583440150411" duration="1337000" />
+      <workItem from="1583678842413" duration="175000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< Updated upstream
     <option name="totallyTimeSpent" value="17150000" />
+=======
+    <option name="totallyTimeSpent" value="8214000" />
+>>>>>>> Stashed changes
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+<<<<<<< Updated upstream
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25416666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+=======
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25746268" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+>>>>>>> Stashed changes
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -387,14 +449,76 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/part1/index.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1496">
+          <caret line="88" column="48" selection-start-line="88" selection-start-column="48" selection-end-line="88" selection-end-column="48" />
+          <folding>
+            <marker date="1583679002963" expanded="true" signature="3729:3900" ph="SELECT slots... sessions" />
+            <marker date="1583679002963" expanded="true" signature="4066:4214" ph="SELECT slots... sessions" />
+            <marker date="1583679002963" expanded="true" signature="4457:4514" ph="SELECT sessi... sessions" />
+            <marker date="1583679002963" expanded="true" signature="5105:5162" ph="SELECT passw... users" />
+            <marker date="1583679002963" expanded="true" signature="6718:6754" ph="SELECT DISTI... slots" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apitester.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/part2/js/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="40" column="60" selection-start-line="40" selection-start-column="60" selection-end-line="40" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/part2/js/partials/schedule.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/part2/js/partials/days.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/part2/js/services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="70" selection-start-line="24" selection-start-column="70" selection-end-line="25" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/part1/index.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+<<<<<<< Updated upstream
             <marker date="1583505036513" expanded="true" signature="3726:3897" ph="SELECT slots... sessions" />
             <marker date="1583505036513" expanded="true" signature="4065:4213" ph="SELECT slots... sessions" />
             <marker date="1583505036513" expanded="true" signature="4456:4513" ph="SELECT sessi... sessions" />
             <marker date="1583505036513" expanded="true" signature="5041:5098" ph="SELECT passw... users" />
             <marker date="1583505036513" expanded="true" signature="6664:6700" ph="SELECT DISTI... slots" />
+=======
+            <marker date="1583679002963" expanded="true" signature="3729:3900" ph="SELECT slots... sessions" />
+            <marker date="1583679002963" expanded="true" signature="4066:4214" ph="SELECT slots... sessions" />
+            <marker date="1583679002963" expanded="true" signature="4457:4514" ph="SELECT sessi... sessions" />
+            <marker date="1583679002963" expanded="true" signature="5105:5162" ph="SELECT passw... users" />
+            <marker date="1583679002963" expanded="true" signature="6718:6754" ph="SELECT DISTI... slots" />
+>>>>>>> Stashed changes
           </folding>
         </state>
       </provider>
@@ -490,11 +614,19 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+<<<<<<< Updated upstream
             <marker date="1583505036513" expanded="true" signature="3726:3897" ph="SELECT slots... sessions" />
             <marker date="1583505036513" expanded="true" signature="4065:4213" ph="SELECT slots... sessions" />
             <marker date="1583505036513" expanded="true" signature="4456:4513" ph="SELECT sessi... sessions" />
             <marker date="1583505036513" expanded="true" signature="5041:5098" ph="SELECT passw... users" />
             <marker date="1583505036513" expanded="true" signature="6664:6700" ph="SELECT DISTI... slots" />
+=======
+            <marker date="1583679002963" expanded="true" signature="3729:3900" ph="SELECT slots... sessions" />
+            <marker date="1583679002963" expanded="true" signature="4066:4214" ph="SELECT slots... sessions" />
+            <marker date="1583679002963" expanded="true" signature="4457:4514" ph="SELECT sessi... sessions" />
+            <marker date="1583679002963" expanded="true" signature="5105:5162" ph="SELECT passw... users" />
+            <marker date="1583679002963" expanded="true" signature="6718:6754" ph="SELECT DISTI... slots" />
+>>>>>>> Stashed changes
           </folding>
         </state>
       </provider>
@@ -562,6 +694,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/part2/js/partials/schedule.html">
+<<<<<<< Updated upstream
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -612,14 +745,47 @@
             <marker date="1583505036513" expanded="true" signature="5041:5098" ph="SELECT passw... users" />
             <marker date="1583505036513" expanded="true" signature="6664:6700" ph="SELECT DISTI... slots" />
           </folding>
+=======
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+          <folding />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/part2/js/services.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="136">
           <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+=======
+        <state relative-caret-position="680">
+          <caret line="40" column="60" selection-start-line="40" selection-start-column="60" selection-end-line="40" selection-end-column="60" />
+>>>>>>> Stashed changes
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/part2/js/partials/days.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="21" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/part1/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="118" column="4" selection-start-line="118" selection-start-column="4" selection-end-line="118" selection-end-column="4" />
+          <folding>
+            <marker date="1583679002963" expanded="true" signature="3729:3900" ph="SELECT slots... sessions" />
+            <marker date="1583679002963" expanded="true" signature="4066:4214" ph="SELECT slots... sessions" />
+            <marker date="1583679002963" expanded="true" signature="4457:4514" ph="SELECT sessi... sessions" />
+            <marker date="1583679002963" expanded="true" signature="5105:5162" ph="SELECT passw... users" />
+            <marker date="1583679002963" expanded="true" signature="6718:6754" ph="SELECT DISTI... slots" />
+          </folding>
         </state>
       </provider>
     </entry>
