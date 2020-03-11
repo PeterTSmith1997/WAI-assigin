@@ -1,0 +1,17 @@
+body{
+    margin: 5%;
+}
+table{
+    width: 50%;
+    float: left;
+}
+.sessionDetail{
+    position: absolute;
+    background-color: antiquewhite;
+}
+.schedule{
+    width: 50%;
+}
+.days{
+    width: 50%;
+}

@@ -92,12 +92,12 @@ switch ($options['subject']){
                 if (isset($options['param2'])) {
 
 //                    $data = json_decode($data);
-                    $sql = "SELECT slots.day, sessions.id, sessions.title, sessions.room, slotsID, slots.time FROM sessions JOIN slots ON
+                    $sql = "SELECT slots.day, sessions.id, sessions.title, sessions.room, slotsID, slots.time, sessions.chair FROM sessions JOIN slots ON
 slotsID = slots.id WHERE slots.day = :day ORDER BY slots.time";
                     $response = $response->getJSONRecordSet($sql, array("day" => $options['param2']));
                 }
                 else{
-                    $sql = "SELECT slots.day, sessions.id, sessions.title, sessions.room, slotsID, slots.time FROM sessions JOIN slots ON
+                    $sql = "SELECT slots.day, sessions.id, sessions.title, sessions.room, slotsID, slots.time, sessions.chair FROM sessions JOIN slots ON
 slotsID = slots.id ORDER BY slots.time";
                     $response = $response->getJSONRecordSet($sql);
                 }

@@ -77,22 +77,6 @@
                            });
                    return defer.promise;
                };
-               this.getSessionDetails = function (id) {
-                   var defer = $q.defer(),
-                       sessionUrl = urlBase + 'session/'+id;
-                   $http.get(sessionUrl, {cache: true})
-                       .then(function (response){ 
-                           console.log(respnse);
-                           defer.resolve({
-                               data: response.data.data.Results
-                           });
-
-                           },
-                           function (err) {
-                               defer.reject(err);
-                           });
-                   return defer.promise;
-               };
             }
         ]
     );
