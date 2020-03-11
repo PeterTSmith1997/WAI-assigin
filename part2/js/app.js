@@ -26,9 +26,7 @@
                     .when('days',{
                         templateUrl: "js/partials/days.html",
                         controller: "daysController"
-                        }
-
-                )
+                        })
                 .otherwise({
 
                  })

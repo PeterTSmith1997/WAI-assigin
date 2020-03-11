@@ -1,3 +1,9 @@
+<section style="position: relative">
+        <div data-ng-show="editorVisible"
+             data-ng-include="'js/partials/session-details.html'">
+        </div>
+</section>
+
 <p>There are {{sesscCount}} on</p>
 <table>
         <tr>
@@ -5,7 +11,8 @@
                 <th>Time</th>
                 <th>Location</th>
         </tr>
-        <tr data-ng-repeat="schedule in schedules">
+        <tr data-ng-repeat="schedule in schedules"
+            data-ng-click="showSlot($event, schedule.id, ' schedule.id')">
                 <td>{{schedule.title}}</td>
                 <td>{{schedule.time}}</td>
                 <td>{{schedule.room}}</td>

@@ -3,4 +3,63 @@
   <data-source name="Sqlite (Xerial) - chi2019.sqlite" uuid="2ca26fa4-1e6d-49d2-8af0-284706131a76">
     <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
   </data-source>
+  <data-source name="Sqlite (Xerial) - chi2019.sqlite [2]" uuid="15067914-21ff-45bf-add1-312aeb1f4898">
+    <database-info product="SQLite" version="3.25.1" jdbc-version="2.1" driver-name="SQLite JDBC" driver-version="3.25.1">
+      <identifier-quote-string>&quot;</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed"/>
+    <schema name="" catalog=""/>
+    <table name="activities" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INT" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="sessionsID" sqlType="INT" precision="0" scale="-1" nullable="false" jdbcType="4"/>
+      <column name="title" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="doiURL" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="abstract" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="keywords" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="authors" schema="" catalog="" type="TABLE">
+      <column name="author" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="affiliation" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="authorID" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="papers_authors" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INT" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="activitiesID" sqlType="INT" precision="0" scale="-1" nullable="false" jdbcType="4"/>
+      <column name="authorID" sqlType="TEXT" precision="0" scale="-1" nullable="false" jdbcType="12"/>
+      <column name="authorOrder" sqlType="INT" precision="0" scale="-1" nullable="false" jdbcType="4"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="papers_awards" schema="" catalog="" type="TABLE">
+      <column name="activitiesID" sqlType="INT" precision="0" scale="-1" nullable="false" jdbcType="4"/>
+      <column name="award" sqlType="TEXT" precision="0" scale="-1" nullable="false" jdbcType="12"/>
+    </table>
+    <table name="sessions" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INT" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="slotsID" sqlType="INT" precision="0" scale="-1" nullable="false" jdbcType="4"/>
+      <column name="title" sqlType="TEXT" precision="0" scale="-1" nullable="false" jdbcType="12"/>
+      <column name="type" sqlType="TEXT" precision="0" scale="-1" nullable="false" jdbcType="12"/>
+      <column name="room" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="chair" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="description" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="slots" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INT" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="day" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="time" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="sqlite_autoindex_activities_1" schema="" catalog="" type="TABLE"/>
+    <table name="sqlite_autoindex_papers_authors_1" schema="" catalog="" type="TABLE"/>
+    <table name="sqlite_autoindex_sessions_1" schema="" catalog="" type="TABLE"/>
+    <table name="sqlite_autoindex_slots_1" schema="" catalog="" type="TABLE"/>
+    <table name="sqlite_autoindex_users_1" schema="" catalog="" type="TABLE"/>
+    <table name="users" schema="" catalog="" type="TABLE">
+      <column name="username" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="email" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="admin" sqlType="INT" precision="0" scale="-1" nullable="false" jdbcType="4"/>
+      <column name="password" sqlType="TEXT" precision="0" scale="-1" nullable="false" jdbcType="12"/>
+    </table>
+  </data-source>
 </component>

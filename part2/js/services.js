@@ -24,10 +24,8 @@
                     console.log("abot to call defar");
                     console.log(day);
                     var defer = $q.defer(),             // The promise
-                        data =
-                        {"day": day},
-                        scheduleUrl = urlBase + 'schedule/'; // add the static file containing courses to the base url
-                    $http.get(scheduleUrl,data)                          // notice the dot to start the chain to success()
+                        scheduleUrl = urlBase + 'schedule/'+day; // add the static file containing courses to the base url
+                    $http.get(scheduleUrl)                          // notice the dot to start the chain to success()
                         .then(function (response) {
                                 console.log(response);
                                 defer.resolve({
@@ -72,6 +70,22 @@
                                defer.resolve({
                                    data: response.data.data.Results         // create data property with value from response
                                });
+
+                           },
+                           function (err) {
+                               defer.reject(err);
+                           });
+                   return defer.promise;
+               };
+               this.getSessionDetails = function (id) {
+                   var defer = $q.defer(),
+                       sessionUrl = urlBase + 'session/'+id;
+                   $http.get(sessionUrl, {cache: true})
+                       .then(function (response){ 
+                           console.log(respnse);
+                           defer.resolve({
+                               data: response.data.data.Results
+                           });
 
                            },
                            function (err) {

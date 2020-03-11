@@ -83,18 +83,18 @@ switch ($options['subject']){
         $input = json_decode(file_get_contents('php://input'), true);
         $data = isset($input['data']) ? $input['data'] : null;
 
-        header("Content-type: applicaton/json");
+        //header("Content-type: applicaton/json");
         header("Access-Control-Allow-Origin: *");
         switch ($options['param1']){
             case 'schedule';
                 $response = new JSONRecordSet();
 
-                if (isset($data)) {
+                if (isset($options['param2'])) {
 
 //                    $data = json_decode($data);
                     $sql = "SELECT slots.day, sessions.id, sessions.title, sessions.room, slotsID, slots.time FROM sessions JOIN slots ON
 slotsID = slots.id WHERE slots.day = :day ORDER BY slots.time";
-                    $response = $response->getJSONRecordSet($sql, array("day" => $data["day"]));
+                    $response = $response->getJSONRecordSet($sql, array("day" => $options['param2']));
                 }
                 else{
                     $sql = "SELECT slots.day, sessions.id, sessions.title, sessions.room, slotsID, slots.time FROM sessions JOIN slots ON
@@ -109,10 +109,10 @@ slotsID = slots.id ORDER BY slots.time";
                 $response = $response->getJSONRecordSet($sql);
                 echo $response;
                 break;
-            case 'presentations':
+            case 'session':
                 $response = new JSONRecordSet();
-                $sql = "Select from ";
-                $response = $response->getJSONRecordSet($sql);
+                $sql = "Select * from sessions WHERE sessions.id = :id";
+                $response= $response->getJSONRecordSet($sql, array("id"=>$options['param2']));
                 echo $response;
                 break;
             case 'login';

@@ -57,7 +57,17 @@
                     console.log($routeParams.dayid);
                     getSchedules($routeParams.dayid);
                 }
-
+                   $scope.showSlot = function ($event, slot, editorID) {
+                       
+                       var element = $event.currentTarget,
+                           padding = 22,
+                           posY = (element.offsetTop + element.clientTop + padding) - (element.scrollTop + element.clientTop),
+                           studentEditorElement = document.getElementById(editorID);
+                       console.log(slot);
+                       $scope.selectSlot = angular.copy(slot);
+                       $scope.editorVisible = true;
+                   };
+                       
                 }
             ]).
     controller('PaperSearch',
