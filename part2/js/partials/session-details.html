@@ -1,4 +1,9 @@
 <div>
-    <p>Sessoin title {{selectedSlot.title}}</p>
-    <p>chair {{selectedSlot.chair }}</p>
+    {{slots.title}}
+    {{slots.chair}}
+
+    <p data-ng-repeat="paperInfo in paperSlot">
+        {{paperInfo.abstract}}
+    </p>
+
 </div>

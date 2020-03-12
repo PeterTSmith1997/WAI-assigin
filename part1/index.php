@@ -103,6 +103,15 @@ slotsID = slots.id ORDER BY slots.time";
                 }
                 echo $response;
                 break;
+            case 'slot';
+                $response = new JSONRecordSet();
+                $sql = "SELECT slots.day, sessions.id, sessions.title, activities.abstract, sessions.room, slotsID, slots.time, sessions.chair FROM sessions JOIN slots ON
+slotsID = slots.id join activities ON sessions.id = activities.sessionsID WHERE sessions.id = :id";
+                $response = $response->getJSONRecordSet($sql, array("id" => $options['param2']));
+
+                echo $response;
+
+            break;
             case 'papers';
                 $response = new JSONRecordSet();
                 $sql = "SELECT sessions.id, sessions.title, slotsID FROM sessions";

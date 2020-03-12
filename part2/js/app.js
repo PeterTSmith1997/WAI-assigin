@@ -23,6 +23,10 @@
                         templateUrl: "js/partials/schedule.html",
                         controller: "Schedule"
                     })
+                    .when('/Schedule/:dayid/slot/:slotid/',{
+                        templateUrl: "js/partials/session-details.html",
+                        controller: "Slots"
+                    })
                     .when('days',{
                         templateUrl: "js/partials/days.html",
                         controller: "daysController"

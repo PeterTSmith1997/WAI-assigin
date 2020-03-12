@@ -42,6 +42,23 @@
 
                     return defer.promise;
                 };
+                this.getSlotDetails =function (slot){
+
+                    var defer = $q.defer(),             // The promise
+                        slotUrl = urlBase + 'slot/'+slot; // add the static file containing courses to the base url
+                    $http.get(slotUrl)                          // notice the dot to start the chain to success()
+                        .then(function (response) {
+                                console.log(response);
+                                defer.resolve({
+                                    data: response.data.data.Results,         // create data property with value from response
+                                    count: response.data.data.RowCount
+                                });
+                            },                                                 // another dot to chain to error()
+                            function (err) {
+                                defer.reject(err);
+                            });
+                    return defer.promise;
+                };
 
                this.getPapers = function () {
                    var defer = $q.defer(),

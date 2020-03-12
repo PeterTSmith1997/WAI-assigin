@@ -24,16 +24,17 @@
         ]
     ).
     controller('Schedule',
-            [
+        [
 
-                '$scope', // angular variable as a string
-                'dataService',
-                '$routeParams',
-               function ($scope, dataService, $routeParams) {
-                   console.log($routeParams);
-                   console.log($routeParams.dayid);
+            '$scope', // angular variable as a string
+            'dataService',
+            '$routeParams',
+            '$location',
+            function ($scope, dataService, $routeParams, $location) {
+                console.log($routeParams);
+                console.log($routeParams.dayid);
 
-                   var getSchedules = function (day) {
+                var getSchedules = function (day) {
                     dataService.getSchedules(day).then(  // then() is called when the promise is resolve or rejected
                         function(response){
                             console.log(response);
@@ -49,7 +50,7 @@
                         }
                     ); // end of getCourses().then
                 };
-   //             getSchedules("Monday");
+                //             getSchedules("Monday");
                 console.log($routeParams.dayid);
 
 
@@ -57,19 +58,53 @@
                     console.log($routeParams.dayid);
                     getSchedules($routeParams.dayid);
                 }
-                   $scope.showSlot = function ($event, slot, editorID) {
-                       
-                       var element = $event.currentTarget,
-                           padding = 22,
-                           posY = (element.offsetTop + element.clientTop + padding) - (element.scrollTop + element.clientTop),
-                           studentEditorElement = document.getElementById(editorID);
-                       console.log(slot);
-                       $scope.selectedSlot = angular.copy(slot);
-                       $scope.editorVisible = true;
-                   };
-                       
+
+                $scope.selectSlot = function ($event, slot) {
+                    $scope.selectedSot = slot;
+                    $location.path('/Schedule/' + $routeParams.dayid+ '/slot/'+slot.id);
+                };
+
+
+            }
+        ]).
+
+    controller('Slots',
+        [
+
+            '$scope', // angular variable as a string
+            'dataService',
+            '$routeParams',
+            function ($scope, dataService, $routeParams) {
+                console.log($routeParams);
+                console.log($routeParams.dayid);
+
+                var getSlotDetails = function (slot) {
+                    dataService.getSlotDetails(slot).then(  // then() is called when the promise is resolve or rejected
+                        function(response){
+                            console.log(response);
+                            $scope.commonDetails = response.data[0];
+                            $scope.paperSlot = response.data
+
+                        },
+                        function(err){
+                            $scope.status = 'Unable to load data ' + err;
+                        },
+                        function(notify){
+                            console.log(notify);
+                        }
+                    ); // end of getCourses().then
+                };
+                //             getSchedules("Monday");
+                console.log($routeParams.dayid);
+
+
+                if ($routeParams && $routeParams.dayid){
+                    console.log($routeParams.slotid);
+                    getSlotDetails($routeParams.slotid);
                 }
-            ]).
+
+            }
+        ]).
     controller('PaperSearch',
         [
 
@@ -96,7 +131,7 @@
 
             }
         ]).
-        controller('daysController',
+    controller('daysController',
         [
 
             '$scope',               // angular variable as a string
@@ -126,7 +161,7 @@
 
                 getDays();  // call the method just defined
             }
-                ])
+        ])
 
 
 }());
